@@ -1,8 +1,8 @@
 # i3-config
 
-core: arch
-shell: bash
-wm: i3
+**os: arch**
+**shell: bash**
+**wm: i3**
 
 
 ### Screenhot workspace
