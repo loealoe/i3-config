@@ -1,0 +1,35 @@
+#python snippets
+'.source.python':
+  'Snippet Name':
+    'prefix': 'trigges'
+    'body': 'Hello World!'
+
+  'sqlURI':
+    'prefix': 'squ'
+    'body': """SQLALCHEMY_DATABASE_URI = '${1:mysql}+${2:mysqlconnector}://${3:root}:${4:12345}@${5:localhost}/${6:nameDataBase}'$7"""
+
+
+  'super':
+    'prefix': 'super'
+    'body': 'super($1).__init__($2)$3'
+
+
+
+
+
+#html snippets
+'.text.html.basic':
+  'block':
+    'prefix': 'block'
+    'body': """
+    {% block $1 %}
+      $2
+    {% endblock%}
+    """
+  'extends':
+    'prefix': 'ext'
+    'body': """{% extends '$1.html' %}"""
+
+  'urlfor':
+    'prefix': 'ufor'
+    'body': """{{url_for("$1")}}"""
