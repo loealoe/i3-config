@@ -18,6 +18,8 @@
 
 
 #html snippets
+
+#flask snippets in html
 '.text.html.basic':
   'block':
     'prefix': 'block'
@@ -31,5 +33,38 @@
     'body': """{% extends '$1.html' %}"""
 
   'urlfor':
-    'prefix': 'ufor'
-    'body': """{{url_for("$1")}}"""
+    'prefix': 'urlfor'
+    'body': """{{ url_for("$1") }}"""
+
+  'ifblock':
+    'prefix': 'ifblock'
+    'body': """
+    {% if $1 %}
+
+    {% else %}
+
+    {% endif %}
+    """
+  'forblock':
+    'prefix': 'forblock'
+    'body': """
+    {% for $1 in $2 %}
+    $3
+    {% endfor %}
+    """
+
+  'macro':
+    'prefix': 'macro'
+    'body': """
+    {% macro $1 %}
+    $3
+    {% endmacro %}
+    """
+
+  'imp':
+    'prefix': 'imp'
+    'body': '{% import $1 as $2 %}'
+
+  'include':
+    'prefix': 'include'
+    'body': '{% include \'$1\' %}'
